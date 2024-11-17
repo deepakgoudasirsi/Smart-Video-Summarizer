@@ -11,6 +11,8 @@ Visualization & Analytics: Provides visualizations for engagement and summary ef
 Sentiment Analysis: Analyzes the emotional tone of video content.
 Download Options: Download summaries as text, audio, or video clips.
 AI-Powered Recommendations: Suggests related content based on user interactions.
+
+
 Technologies Used:
 Python
 TensorFlow
