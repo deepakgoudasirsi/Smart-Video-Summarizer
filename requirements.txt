@@ -1,0 +1,14 @@
+tensorflow-macos>=2.12.0
+opencv-python>=4.7.0
+numpy>=1.23.5
+google-cloud-speech>=2.19.0
+google-cloud-texttospeech>=2.11.0
+gTTS>=2.3.2
+ffmpeg-python>=0.2.0
+matplotlib>=3.7.1
+seaborn>=0.12.2
+transformers>=4.30.2
+torch>=2.0.1
+python-dotenv>=1.0.0
+pandas>=2.0.2
+scikit-learn>=1.2.2 
