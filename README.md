@@ -1,10 +1,5 @@
 # Smart Video Summarizer 🎥
 
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.12.0-orange)](https://www.tensorflow.org/)
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.7.0-blue)](https://opencv.org/)
-
 Smart Video Summarizer is an AI-powered tool designed to analyze and summarize healthcare videos, such as surgery recordings and patient health data, enabling healthcare professionals to quickly access critical insights without watching the entire video.
 
 ## 📋 Overview
@@ -52,18 +47,6 @@ This project leverages advanced AI and machine learning techniques to process he
 - FFmpeg installed on your system
 - Google Cloud account with Speech-to-Text and Text-to-Speech APIs enabled
 
-## 📸 Screenshots
-
-### Video Processing Interface
-![Video Processing](screenshots/video_processing.png)
-
-### Summary Generation
-![Summary Generation](screenshots/summary_generation.png)
-
-### Analytics Dashboard
-![Analytics Dashboard](screenshots/analytics_dashboard.png)
-
-*Note: Screenshots will be added once the UI is implemented*
 
 ## 🚀 Quick Start
 
@@ -121,14 +104,6 @@ The tool supports all languages available in Google Cloud Speech-to-Text API, in
 - Korean (ko-KR)
 - Chinese (zh-CN, zh-TW)
 - And many more...
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
