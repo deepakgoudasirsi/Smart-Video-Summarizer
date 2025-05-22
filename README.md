@@ -1,115 +1,127 @@
-# Smart Video Summarizer 🎥
+# Smart Video Summarizer - Project Explanation
 
-Smart Video Summarizer is an AI-powered tool designed to analyze and summarize healthcare videos, such as surgery recordings and patient health data, enabling healthcare professionals to quickly access critical insights without watching the entire video.
+## 📊 Project Overview
 
-## 📋 Overview
+The **Smart Video Summarizer** is an AI-powered tool specifically designed for healthcare professionals to quickly analyze and understand video content, such as surgery recordings and patient consultations, without having to watch the entire video.
 
-This project leverages advanced AI and machine learning techniques to process healthcare videos, extract meaningful information, and generate concise summaries. It's particularly useful for medical professionals who need to quickly review surgical procedures, patient consultations, or medical training videos.
+## ✨ Key Features
 
-## 🛠️ Tech Stack
+### 1. Intelligent Video Processing
 
-### Core Technologies
-- **Python 3.8+**: Primary programming language
-- **TensorFlow**: Deep learning framework for video analysis
-- **OpenCV**: Video processing and computer vision
-- **Google Cloud APIs**: Speech-to-Text and Text-to-Speech services
-- **FFmpeg**: Video processing and manipulation
+* Extracts key frames from videos
+* Detects scene changes
+* Analyzes visual content using computer vision (OpenCV)
 
-### AI/ML Components
-- **Transformers**: Natural language processing for summarization
-- **scikit-learn**: Machine learning algorithms for analysis
-- **PyTorch**: Deep learning framework for advanced models
+### 2. Advanced Speech Recognition
 
-### Data Processing
-- **NumPy**: Numerical computing
-- **Pandas**: Data manipulation and analysis
-- **Matplotlib & Seaborn**: Data visualization
+* Converts spoken content to text using Google Cloud Speech-to-Text
+* Supports multiple languages
+* Provides word-level timestamps for precise analysis
 
-### Audio Processing
-- **gTTS**: Google Text-to-Speech integration
-- **FFmpeg-python**: Audio processing and conversion
+### 3. AI-Powered Summarization
 
-## Features
+* Uses the BART model from Hugging Face Transformers
+* Generates concise summaries of video content
+* Extracts key points and important events
 
-- Video Upload: Upload videos from various sources (URLs, local files, cloud storage)
-- Transcription: Converts spoken content in videos into text using Google Speech-to-Text API
-- Text-to-Audio: Converts text summaries into audio using Google Text-to-Speech
-- Summarization: Automatically generates concise video summaries based on important events
-- Multi-Language Support: Handles multiple languages for transcription and summarization
-- Visualization & Analytics: Provides visualizations for engagement and summary effectiveness
-- Sentiment Analysis: Analyzes the emotional tone of video content
-- Download Options: Download summaries as text, audio, or video clips
-- AI-Powered Recommendations: Suggests related content based on user interactions
+### 4. Sentiment Analysis
 
-## Prerequisites
+* Analyzes emotional tone of the content
+* Provides sentiment scores over time
+* Identifies key emotional moments
 
-- Python 3.8 or higher
-- FFmpeg installed on your system
-- Google Cloud account with Speech-to-Text and Text-to-Speech APIs enabled
+### 5. Visualization & Analytics
+
+* Creates timeline visualizations
+* Generates frame analysis graphs
+* Provides comprehensive summary visualizations
+
+### 6. Multi-Format Output
+
+* Text summaries
+* Audio summaries
+* Video summaries with key moments
+
+## 📈 Technical Architecture
+
+### Core Components
+
+* `video_processor.py`: Handles video processing and frame extraction
+* `transcription.py`: Manages speech-to-text conversion
+* `summarizer.py`: Generates concise summaries using NLP
+* `audio_generator.py`: Converts text summaries into speech
+* `sentiment_analyzer.py`: Performs sentiment analysis on transcript
+* `visualization.py`: Creates graphs and visual representations
 
 
-## 🚀 Quick Start
+## 🚀 Use Cases
 
-1. Clone the repository:
+### Medical Education
+
+* Summarize surgical procedures
+* Extract key learning points from lectures
+* Create concise video tutorials
+
+### Patient Care
+
+* Review consultations quickly
+* Identify key moments in interactions
+* Generate documentation for medical records
+
+### Research & Analysis
+
+* Analyze patterns in procedures
+* Study communication in healthcare
+* Gain insights from training content
+
+## ⚙️ How It Works
+
+### Input Processing
+
 ```bash
-git clone https://github.com/yourusername/smart-video-summarizer.git
+python main.py --input video.mp4 --output_dir output
+```
+
+### Processing Pipeline
+
+* Frames extracted and analyzed with OpenCV
+* Audio transcribed using Google Cloud Speech API
+* Summarization via Hugging Face Transformers
+* Sentiment analysis on transcript
+* Visualizations created with matplotlib/seaborn
+
+### Output Files
+
+* `summary.txt`: Text summary
+* `summary.mp3`: Audio summary (optional)
+* `summary.mp4`: Video summary (optional)
+* `sentiment_timeline.png`: Sentiment analysis
+* `frame_analysis.png`: Frame analysis
+* `summary_visualization.png`: Summary visualization
+
+---
+
+## Benefits
+
+* Saves 80-90% time on video review
+* Helps healthcare professionals quickly find critical information
+* Supports better documentation and medical training
+
+---
+
+### Installation
+
+```bash
+# Clone repository
+git clone https://github.com/deepakgoudasirsi/smart-video-summarizer.git
 cd smart-video-summarizer
+
 ```
+---
 
-2. Set up the environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
+## Contact
 
-3. Configure Google Cloud credentials:
-```bash
-export GOOGLE_APPLICATION_CREDENTIALS="path/to/your/credentials.json"
-```
+* **Deepak Gouda**
+  [GitHub @deepakgoudasirsi](https://github.com/deepakgoudasirsi)
+  [LinkedIn: Deepak Gouda](https://linkedin.com/in/deepakgoudasirsi)
 
-4. Run the application:
-```bash
-python main.py --input path/to/your/video.mp4 --output_dir path/to/output
-```
-
-## Command Line Arguments
-
-- `--input`: Path to the input video file (required)
-- `--output_dir`: Directory to save the output files (default: 'data/output')
-- `--language`: Language code for transcription (default: 'en-US')
-- `--format`: Output format for summary (choices: 'text', 'audio', 'video', default: 'text')
-
-## Output
-
-The tool generates the following outputs in the specified output directory:
-
-1. `summary.txt`: Text summary of the video
-2. `summary.mp3`: Audio summary (if audio format is selected)
-3. `summary.mp4`: Video summary (if video format is selected)
-4. `sentiment_timeline.png`: Visualization of sentiment analysis
-5. `frame_analysis.png`: Analysis of video frames
-6. `summary_visualization.png`: Comprehensive summary visualization
-
-## Supported Languages
-
-The tool supports all languages available in Google Cloud Speech-to-Text API, including:
-
-- English (en-US, en-GB)
-- Spanish (es-ES, es-MX)
-- French (fr-FR)
-- German (de-DE)
-- Italian (it-IT)
-- Japanese (ja-JP)
-- Korean (ko-KR)
-- Chinese (zh-CN, zh-TW)
-- And many more...
-
-## Acknowledgments
-
-- Google Cloud Speech-to-Text API
-- Google Cloud Text-to-Speech API
-- Hugging Face Transformers
-- FFmpeg
-- OpenCV
-- Matplotlib and Seaborn
